@@ -9,36 +9,141 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+    ZStack{
         ZStack{
+             VStack{
+                HStack{
+                    Text("發現")
+                        
+                        .font(.system(size:45))
+                        .fontWeight(.heavy)
+                       .offset(x: -104, y:-200)
+                    Image("lookup")
+                        .resizable()
+                    .scaledToFit()
+                    .frame(width: 70, height: 70 )
+                    .offset(x: 100, y: -200)
+                    
+                }
+                HStack{
+                    Image("leftpic")
+                        .resizable()
+                    .scaledToFit()
+                    .frame(width: 195, height: 195 )
+                    .offset(x: 83, y: -298)
+                    Image("mainpic")
+                        .resizable()
+                    .scaledToFit()
+                    .frame(width: 370, height: 370 )
+                    .offset(x: -0, y: -300)
+                    
+                    Image("rightpic")
+                        .resizable()
+                    .scaledToFit()
+                    .frame(width: 195, height: 195 )
+                    .offset(x: -85, y: -298)
+                    
+                }
+             }
+        }
+        Image("commercial")
+            .resizable()
+            .scaledToFit()
+            .frame(width: 400, height: 400 )
+            .offset(x: 0, y: -50)
+        
         ZStack{
            
-              
+            VStack{
                // .ignoresSafeArea()
-        VStack(alignment: .center, spacing:10) {
+                HStack() {
                 
-                Text("你曾說兩人 會走到同個路口")
-                    .font(.system(size:30))
-                Text("不需要牽手   命運會拉著我")
-            
-                Text("H0ello, world!")
-                    .foregroundColor(Color(red: 1.0, green: 0.0, blue: 0.0, opacity: 1))
-                    .padding()
-                    .background(Color.blue)
-                    .cornerRadius(20.0)
-                    .shadow(radius: 20 )
-                Image("海洋之星封面圖")
-                    .resizable()
-                    .frame(width: 100.0, height: 100.0)
-            
-            
+                     Text("Song of The Day")
+                         .font(.system(size:24))
+                         .fontWeight(.heavy)
+                        .offset(x: -80, y: -10)
+                     Text("更多")
+                     .font(.system(size: 16))
+                     .foregroundColor(Color.red)
+                        .offset(x: 78, y: -7)
+                }.offset(x:1, y: 245)
+                
+                HStack(){
+                    Text("        \n                                                                                         \n     \n            ")
+                        .background(Color(red:160/255,green:160/255,blue:174/255))
+                        .cornerRadius(15.0)
+                        .padding(.top,270)
+                        .overlay(Text("October 03")
+                                    .font(.system(size: 15))
+                                    .foregroundColor(Color.red)
+                                    .offset(x: -10, y: 75))
+                        .overlay(Text("綠洲\nCodie")
+                                    .font(.system(size: 15))
+                                    .fontWeight(.light)
+                                    .offset(x: -50, y: 135)
+                        )
+                        .overlay(Image("playbutton")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 40, height: 40 )
+                                    .offset(x: 160, y: 135)
+                        )
+                        .overlay(Image("star")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 30, height: 30 )
+                                    .offset(x: -65, y: 74)
+                        )
+                        .overlay(Image("song")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 100, height: 100 )
+                                    .offset(x: /*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/, y: 118)
+                                 ,alignment: .leading
+                        )
+                        
+                        
+                        
+                        
+                }
             }
-           
         }
         
         
-       
-            
-        HStack( spacing:35){
+        HStack{
+            VStack{
+                Text("演出活動")
+                 
+                    .font(.system(size: 24))
+                    .fontWeight(.heavy)
+                    .padding(.trailing,160)
+                    .offset(x:20,y:55)
+                Image("activity1")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 210, height: 210 ,alignment: .leading)
+                    .padding(.trailing,1)
+                    .offset(x:5,y:-1)
+                    
+            }
+            VStack{
+                Text("更多")
+                    .font(.system(size: 16))
+                    .foregroundColor(Color.red)
+                    .offset(x:45,y:27)
+                    
+                Image("activity2")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 157, height: 157,alignment: .leading)
+                    .offset(x: 3, y: 5)
+                 
+                    
+            }
+        }.padding(.top,605)
+        Divider().padding(.top,750)
+                 .shadow(radius: 5)
+        HStack( spacing:43){
             
             VStack{
                 Image("compass")
@@ -50,6 +155,7 @@ struct ContentView: View {
                     .offset(y:-3)
                 
             }
+            
             VStack{
                 Image("fire")
                     .resizable()
@@ -90,7 +196,7 @@ struct ContentView: View {
                     .offset(y:-4)
                     
             }
-        }.padding(.top,580)
+        }.padding(.top,835)
             
               
         
